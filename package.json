@@ -1,0 +1,8 @@
+{
+  "name": "hybrid-crypto-bank-showcase",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node --experimental-strip-types src/routePayment.ts"
+  }
+}
