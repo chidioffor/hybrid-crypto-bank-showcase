@@ -1,45 +1,36 @@
-# Hybrid Crypto Bank — public engineering showcase
+# Hybrid Crypto Bank — showcase
 
-> A safe, representative demonstration of financial-platform orchestration—not the Hybrid Crypto Bank production source code.
+**A private financial-platform project, represented here only as a public portfolio case study.**
 
-Hybrid Crypto Bank is represented as a systems-design case study for a multi-rail financial product. The focus here is how to keep provider capabilities, routing choices, customer intent, and auditable outcomes clearly separated.
+Hybrid Crypto Bank demonstrates my approach to modular financial-product architecture: separating customer experience, internal orchestration, provider capability, and auditable lifecycle outcomes.
 
-## What this showcase demonstrates
+## Focus
 
-- **Provider abstraction:** a stable internal intent model avoids coupling product flows to any one provider.
-- **Deliberate routing:** rail selection is policy-driven and explainable, rather than hard-wired into a user interface.
-- **Lifecycle discipline:** an instruction moves through explicit states, supporting retries and auditability.
-- **Honest integration boundaries:** a rail can be represented in the routing layer without asserting that it is enabled in production.
+- Multi-rail payment and wallet-domain design
+- Provider-abstraction and API-first service boundaries
+- Clear, accountable financial workflow modelling
 
 ## Payment rails represented
 
-ACH · Wire · SEPA · SWIFT · Faster Payments · Card · Mobile money · Local bank transfer · Internal transfer
+**ACH · Wire · SEPA · SWIFT · Faster Payments · Card · Mobile money · Local bank transfer · Internal transfer**
 
-These are **integration paths represented by the design**, not a claim that every rail is production-enabled or available in every market. The underlying private project includes implemented Stripe Treasury connected-account and onboarding work; this public repository contains no provider credentials, calls, or configuration.
+These are named integration paths, not a claim that every rail is live, enabled, or available in every market.
 
-## Technology lens
+## Technology signals
 
-| Area | Representative tools |
-| --- | --- |
-| Modular services | Node.js, JavaScript, TypeScript |
-| Platform domains | gateway, users, wallets, payments, cards, escrow |
-| Delivery | Docker, API-first service boundaries |
-| Integration design | provider adapters, routing policies, auditable events |
+**Node.js · JavaScript · TypeScript · Docker · API-first services · Provider adapters**
 
-## Safe sample code
-
-[`src/routePayment.ts`](src/routePayment.ts) uses invented payment instructions and a tiny, offline routing policy. It does not call a banking provider, move value, collect credentials, or model a real compliance process.
-
-```bash
-npm run demo
+```mermaid
+flowchart LR
+  U[Customer experience] --> G[API gateway]
+  G --> O[Payment orchestration]
+  O --> R[Routing policy]
+  R --> P[Provider boundary]
+  O --> A[Audit lifecycle]
 ```
 
-## Architecture
+## Public boundary
 
-See [the public-safe architecture notes](docs/architecture.md) for a conceptual diagram and the safety boundaries used for this showcase.
+This repository intentionally contains no source code, provider integrations, transaction data, compliance controls, account data, credentials, schemas, infrastructure, or production configuration. It is a concise portfolio overview—not a bank or payment service.
 
-## Boundaries
-
-This repository intentionally excludes proprietary source, provider integrations, credentials, customer data, account data, transaction records, compliance rules, deployment topology, secrets, and production configuration. It is not a bank, payment service, or offer of financial services.
-
-© Chidiebere Offor. Demonstration material; no licence to use the Hybrid Crypto Bank name or underlying private implementation is granted.
+© Chidiebere Offor.
