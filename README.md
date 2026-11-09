@@ -4,6 +4,8 @@
 
 Hybrid Crypto Bank is represented as a systems-design case study for a multi-rail financial product. The focus here is how to keep provider capabilities, routing choices, customer intent, and auditable outcomes clearly separated.
 
+> **Confidentiality notice:** This repository is an independently authored, public-safe reference to selected architecture and security responsibilities represented by the private Hybrid Crypto Bank work. It does not contain client source, deployment data, credentials, or production configuration, which remain protected under confidentiality obligations.
+
 ## What this showcase demonstrates
 
 - **Provider abstraction:** a stable internal intent model avoids coupling product flows to any one provider.
@@ -37,6 +39,8 @@ npm run demo
 ## Architecture
 
 See [the public-safe architecture notes](docs/architecture.md) for a conceptual diagram and the safety boundaries used for this showcase.
+
+For a limited contract-lifecycle and confidential-allocation reference, see [contract and settlement controls](docs/contract-and-confidential-settlement-reference.md). The Solidity examples in [`examples/`](examples/) are newly authored illustrations; they are not deployed contracts or copies of private code.
 
 ## Boundaries
 
